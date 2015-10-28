@@ -1,0 +1,55 @@
+package dicetower;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class DiceTower {
+  final int PANEL_COUNT = 3;
+  List<Die> dice;
+
+  public DiceTower() {
+	this.dice = new ArrayList();
+  }
+  final int PANEL_COUNT = 3;    
+  List<Die> dice;               
+  int trayValue;
+    
+    /**
+     *
+     */
+    public DiceTower() {
+	this.dice = new ArrayList(); // 
+        this.trayValue = 0;
+    }
+  
+   public DiceTower(List dice) {
+	this.dice = dice;
+	this.dice = dice; // 
+        this.trayValue = 0;
+   }
+
+
+    public int getTrayValue() {
+        return trayValue;
+    }
+
+    public void dropDice() {
+        for(int panels = 0; panels < PANEL_COUNT; panels++){
+        int i = 0;
+        dice.stream().forEach((die) -> {
+            die.roll();    
+        });
+        trayValue = dice.get(i).getValue();
+        i++;
+        
+        }
+        trayValue += trayValue;  
+        }
+    
+    
+    public static void main(String[] args) {
+        // TODO code application logic here
+    }
+    
+}
