@@ -1,0 +1,33 @@
+package dicetower;
+
+import java.util.Random;
+
+
+public class Die {
+    
+    
+    private int numberSides;   
+    private int value;   
+
+
+    public Die(int numberSides) {
+        this.numberSides = numberSides;
+        this.value = 0;
+    }
+
+    public int getNumberSides() {
+        return numberSides;
+}
+
+    public int getValue() {
+        return value;
+    }    
+
+
+    public void roll(){
+        Random randomNumbers = new Random();
+        value = randomNumbers.nextInt(this.numberSides) + 1;
+    }
+    
+    
+ }
